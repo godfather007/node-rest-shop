@@ -7,8 +7,7 @@ const productsRoutes = require('./api/routes/products');
 const ordersRoutes = require('./api/routes/orders');
 const usersRoutes = require('./api/routes/user');
 
-mongoose.connect('mongodb://node-shop:'+
-process.env.MONGO_ATLAS_PW+
+mongoose.connect('mongodb://node-shop:node-shop'+
 '@node-rest-shop-shard-00-00-tlxgy.mongodb.net:27017,node-rest-shop-shard-00-01-tlxgy.mongodb.net:27017,node-rest-shop-shard-00-02-tlxgy.mongodb.net:27017/test?ssl=true&replicaSet=node-rest-shop-shard-0&authSource=admin');
 
 app.use((req,res,next) =>{
